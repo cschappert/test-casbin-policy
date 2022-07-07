@@ -25,9 +25,10 @@ func TestCheckPermissions(t *testing.T) {
 		expected bool
 	}
 
-	// add test cases here
 	var tests = []test{
 		{"admin", "file", "write", true},
+		{"guest", "file", "write", false},
+		// add additional test cases here
 	}
 
 	for _, test := range tests {
